@@ -11,3 +11,6 @@ contaDoUsuario.conta = "1010x";
 Console.WriteLine($"Saldo da Conta do {contaDoUsuario.titular} = R$ {contaDoUsuario.saldo}");
 contaDoUsuario.Depositar(150);
 Console.WriteLine(contaDoUsuario.saldo);
+
+contaDoUsuario.Sacar(50);
+Console.WriteLine(contaDoUsuario.saldo);
