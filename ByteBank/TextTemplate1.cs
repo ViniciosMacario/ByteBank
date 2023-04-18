@@ -1,4 +1,13 @@
-﻿//Impotando class
+﻿Assuntos para pesquisar:
+ - Encapsulamento.
+ - 
+
+
+
+
+ Código: 
+
+//Impotando class
 using ByteBank.Contas;
 using ByteBank.Titular;
 
@@ -89,7 +98,7 @@ Ou seja, quando comparamos dois objetos estamos comparando os endereçamentos de
 //Console.WriteLine(contaDaIsabela == contaDaIsabelai2);
 
 /* 
-Agora deu true, está apontando para o mesmo endereço de memória.
+AAgora deu true, está apontando para o mesmo endereço de memória.
 Esse é o funcionamento do tipo por valor e do tipo por referência. Com tipagem por valor trabalhamos com tipos primitivos (int, double, float, char e struct); com tipagem por referência trabalhamos com estruturas mais complexas, com objetos, com classes.
  */
 
