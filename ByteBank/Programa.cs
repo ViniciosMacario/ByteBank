@@ -95,20 +95,12 @@ Esse é o funcionamento do tipo por valor e do tipo por referência. Com tipagem
 
 
 //Criando novo objeto user 
-User cliente = new User();
-cliente.cpf = "8893854400";
-cliente.name = "Vinicios";
+//User cliente = new User();
+//cliente.cpf = "8893854400";
+//cliente.name = "Vinicios";
 
-ContaCorrente contaCorreteVinicios= new ContaCorrente();
+ContaCorrente contaCorreteVinicios= new();
 //a propriedade vai herdar os valores de cliente.
-contaCorreteVinicios.titular = cliente;
 contaCorreteVinicios.SetSaldo(250);
-contaCorreteVinicios.conta = "1025-x";
-contaCorreteVinicios.numero_agencia = 101011;
 
-
-Console.WriteLine(contaCorreteVinicios.titular.name);
-Console.WriteLine(contaCorreteVinicios.titular.cpf);
-Console.WriteLine(contaCorreteVinicios.titular.job);
-Console.WriteLine(contaCorreteVinicios.conta);
 Console.WriteLine(contaCorreteVinicios.GetSaldo());

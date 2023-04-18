@@ -1,19 +1,21 @@
 ﻿
-// Namespace é a maneira que o .NET utiliza para organizar suas bibliotecas e ajuda na composição do nome de uma classe. Para utilizar uma classe de determinado namespace, temos duas maneiras básicas: usar a diretiva using ou o nome completo qualificado.
-using ByteBank.Titular;
-
+using ByteBank.Titular; // Namespace é a maneira que o .NET utiliza para organizar suas bibliotecas e ajuda na composição do nome de uma classe. Para utilizar uma classe de determinado namespace, temos duas maneiras básicas: usar a diretiva using ou o nome completo qualificado.
 
 namespace ByteBank.Contas
 {
     public class ContaCorrente
     {
-        //Com isso estamos criando uma referência. Esse campo vai receber, na verdade, uma referência para um objeto do tipo Cliente.
-        private User titular;
-        private string conta;
-        private int numero_agencia;
         
+        private User titular; //Com isso estamos criando uma referência. Esse campo vai receber, na verdade, uma referência para um objeto do tipo Cliente.
+        private string conta;
         private double saldo = 100; // definindo um valor padrão igual a 100
+        private int numeroDaAgencia;
 
+        public int NumeroAgencia
+        {
+            get { return this.numeroDaAgencia; }
+            set { if (value > 0) this.numeroDaAgencia = value;} 
+        }
 
 
 
