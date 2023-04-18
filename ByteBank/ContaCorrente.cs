@@ -8,10 +8,12 @@ namespace ByteBank
 {
     public class ContaCorrente
     {
-        public int numero_agencia;
         public string conta;
         public string titular;
-        public double saldo;
+        public int numero_agencia;
+        // definindo um valor padrão igual a 100
+        public double saldo = 100;
+
 
 
         //Criando um método para adicionar novos valores no saldo final.
@@ -29,7 +31,6 @@ namespace ByteBank
             this.saldo -= valor;
             Console.WriteLine("Saque efetuado com Sucesso!");
         }
-
         public void Transferir(double valor, ContaCorrente destino)
         {
             if(this.saldo - valor <= 0)
@@ -43,6 +44,15 @@ namespace ByteBank
 
                 destino.Depositar(valor);
             }
+        }
+        //
+        public void DadosDoUsuario()
+        {
+            Console.WriteLine("Títular: " + titular);
+            Console.WriteLine("Número da agência: " + numero_agencia);
+            Console.WriteLine("Número da conta: " + conta);
+            Console.WriteLine("Saldo atual: " + saldo);
+            
         }
     }
 }
