@@ -1,7 +1,6 @@
-﻿//Impotando class
+﻿//Impotando class nas diretivas de pré-processamento.
 using ByteBank.Contas;
 using ByteBank.Titular;
-
 
 //"ContaCorrente" é a tipagem da Class
 //New é o operador que nos permite criar um novo objeto e chamar a class.
@@ -69,7 +68,6 @@ using ByteBank.Titular;
 //obj2
 //endereço na memória: 2001:DD9:AD:F:0:0:0:8
 
-
 //ContaCorrente contaDaIsabelai2 = new ContaCorrente();
 //contaDaIsabelai2.titular = "Isabela Carvalho Demarchi";
 //contaDaIsabelai2.saldo = 15;
@@ -89,7 +87,7 @@ Ou seja, quando comparamos dois objetos estamos comparando os endereçamentos de
 //Console.WriteLine(contaDaIsabela == contaDaIsabelai2);
 
 /* 
-Agora deu true, está apontando para o mesmo endereço de memória.
+AAgora deu true, está apontando para o mesmo endereço de memória.
 Esse é o funcionamento do tipo por valor e do tipo por referência. Com tipagem por valor trabalhamos com tipos primitivos (int, double, float, char e struct); com tipagem por referência trabalhamos com estruturas mais complexas, com objetos, com classes.
  */
 
@@ -104,7 +102,7 @@ cliente.name = "Vinicios";
 ContaCorrente contaCorreteVinicios= new ContaCorrente();
 //a propriedade vai herdar os valores de cliente.
 contaCorreteVinicios.titular = cliente;
-contaCorreteVinicios.DefinirSaldo(250);
+contaCorreteVinicios.SetSaldo(250);
 contaCorreteVinicios.conta = "1025-x";
 contaCorreteVinicios.numero_agencia = 101011;
 
@@ -113,4 +111,4 @@ Console.WriteLine(contaCorreteVinicios.titular.name);
 Console.WriteLine(contaCorreteVinicios.titular.cpf);
 Console.WriteLine(contaCorreteVinicios.titular.job);
 Console.WriteLine(contaCorreteVinicios.conta);
-Console.WriteLine(contaCorreteVinicios.ObterSaldo());
+Console.WriteLine(contaCorreteVinicios.GetSaldo());

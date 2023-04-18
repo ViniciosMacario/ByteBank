@@ -1,7 +1,8 @@
 ﻿Assuntos para pesquisar:
  - Encapsulamento.
- - 
-
+ - Modificador de acesso 
+ - propriedades > Por padrão as propriedades são públicas e encapsulam campos privados.
+ - propriedades autoimplementadas
 
 
 
