@@ -1,16 +1,34 @@
-﻿using ByteBank;
+﻿//Impotando class
+using ByteBank;
 
-//precisamos definir o tipo do objeto no caso é conta corrente
-//new, que é o operador que nos permite criar um novo objeto
-ContaCorrente contaDoUsuario = new ContaCorrente();
-contaDoUsuario.titular = "Vinicios";
-contaDoUsuario.numero_agencia = 10;
-contaDoUsuario.saldo = 2000;
-contaDoUsuario.conta = "1010x";
 
-Console.WriteLine($"Saldo da Conta do {contaDoUsuario.titular} = R$ {contaDoUsuario.saldo}");
-contaDoUsuario.Depositar(150);
-Console.WriteLine(contaDoUsuario.saldo);
+//"ContaCorrente" é a tipagem da Class
+    //New é o operador que nos permite criar um novo objeto e chamar a class.
+ContaCorrente contaDoAndre = new ContaCorrente();
 
-contaDoUsuario.Sacar(50);
-Console.WriteLine(contaDoUsuario.saldo);
+//Criando um objeto "user"
+    contaDoAndre.titular = "Vinicios";
+    contaDoAndre.saldo = 20000;
+    contaDoAndre.conta = "1010-x";
+    contaDoAndre.numero_agencia = 10;
+
+//Chamando o método Depositar
+//contaDoUsuario.Depositar(10000);
+//Console.WriteLine($"Saldo atual : R$ {contaDoUsuario.saldo}");
+
+//Chamando o método Sacar
+//contaDoUsuario.Sacar(5000);
+//Console.WriteLine($"Saldo atual : R$ {contaDoUsuario.saldo}");
+
+ContaCorrente contaDaIsabela = new ContaCorrente();
+  contaDaIsabela.titular = "Isabela Carvalho Demarchi";
+  contaDaIsabela.saldo = 15;
+  contaDaIsabela.conta = "1025-x";
+  contaDaIsabela.numero_agencia = 101011;
+
+
+//Chamando o método Transferir
+contaDoAndre.Transferir(15000, contaDaIsabela);
+Console.WriteLine($"Saldo atual : R$ {contaDoAndre.saldo}");
+
+Console.WriteLine($"Saldo atual da {contaDaIsabela.titular} : R$ {contaDaIsabela.saldo}");
