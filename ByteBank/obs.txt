@@ -1,5 +1,5 @@
 ﻿Assuntos para pesquisar:
- - Encapsulamento.
+ - Encapsulamento - O encapsulamento é uma prática recomendada. Definimos campos privados usando métodos públicos ou utilizando propriedades.
  - Modificador de acesso 
  - propriedades > Por padrão as propriedades são públicas e encapsulam campos privados.
  - propriedades autoimplementadas

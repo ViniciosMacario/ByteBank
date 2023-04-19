@@ -5,19 +5,20 @@ namespace ByteBank.Contas
 {
     public class ContaCorrente
     {
-        
-        private User titular; //Com isso estamos criando uma referência. Esse campo vai receber, na verdade, uma referência para um objeto do tipo Cliente.
-        private string conta;
         private double saldo = 100; // definindo um valor padrão igual a 100
-        private int numeroDaAgencia;
 
+
+        // Essa sintaxa é o que chamamos de Propriedade autoImplementada.
+            //Campos da class ContaCorrente
+        public string Conta { get; set; } // Por baixo dos panos, o assessor get irá retornar o conteúdo de um campo de uma classe.
+        public string Titular { get; set; }
+
+        public int numeroDaAgencia;
         public int NumeroAgencia
         {
             get { return this.numeroDaAgencia; }
             set { if (value > 0) this.numeroDaAgencia = value;} 
         }
-
-
 
         //Funções que a Class ContaCorrente possui.
         public void Depositar(double valor)
@@ -50,9 +51,9 @@ namespace ByteBank.Contas
         }
         public void DadosDoUsuario()
         {
-            Console.WriteLine("Títular: " + titular);
-            Console.WriteLine("Número da agência: " + numero_agencia);
-            Console.WriteLine("Número da conta: " + conta);
+            Console.WriteLine("Títular: " + Titular);
+            //Console.WriteLine("Número da agência: " + numero_agencia);
+            //Console.WriteLine("Número da conta: " + conta);
             Console.WriteLine("Saldo atual: " + saldo);
 
         }

@@ -13,14 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="obs.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>obs.txt</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="obs.txt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>obs.cs</LastGenOutput>

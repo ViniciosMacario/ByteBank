@@ -3,8 +3,8 @@ namespace ByteBank.Titular
 {
     public class User
     {
-        public string name;
-        public string cpf;
-        public string job;
+        public string Nome { get; set; }
+        public string CPF { get; set; }
+        public string Profissao { get; set; }
     }
 }
