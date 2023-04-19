@@ -1,5 +1,6 @@
 ﻿
 using ByteBank.Titular; // Namespace é a maneira que o .NET utiliza para organizar suas bibliotecas e ajuda na composição do nome de uma classe. Para utilizar uma classe de determinado namespace, temos duas maneiras básicas: usar a diretiva using ou o nome completo qualificado.
+using System.Runtime.ConstrainedExecution;
 
 namespace ByteBank.Contas
 {
@@ -7,18 +8,30 @@ namespace ByteBank.Contas
     {
         private double saldo = 100; // definindo um valor padrão igual a 100
 
-
         // Essa sintaxa é o que chamamos de Propriedade autoImplementada.
             //Campos da class ContaCorrente
         public string Conta { get; set; } // Por baixo dos panos, o assessor get irá retornar o conteúdo de um campo de uma classe.
         public string Titular { get; set; }
-
         public int numeroDaAgencia;
         public int NumeroAgencia
         {
             get { return this.numeroDaAgencia; }
-            set { if (value > 0) this.numeroDaAgencia = value;} 
+            private set { if (value > 0) this.numeroDaAgencia = value;} 
         }
+        //Quando uma propriedade é estática ela passa a ser da classe e não mais dos objetos criados da parte dela.
+
+        //o membro estático é uma propriedade relacionada à classe e não ao objeto. Os objetos conseguem acessar essa propriedade porque faz parte do contexto da classe, por isso o construtor conseguiu fazer o incremento dela.
+
+        //Membros estáticos, no momento da execução do programa, são carregados diretamente para a memória, por isso devem ser usados com bastante cautela para não ocuparmos a memória do computador com informações desnecessárias para a resolução do problema.
+        public static int TotalDeContasCriadas { get; private set; }
+        //Método construtor principal da página
+        public ContaCorrente(int numeroDaAgencia, string numeroDaConta)
+        {
+            NumeroAgencia = numeroDaAgencia;
+            Conta = numeroDaConta;
+            TotalDeContasCriadas += 1;
+        }
+
 
         //Funções que a Class ContaCorrente possui.
         public void Depositar(double valor)
@@ -73,4 +86,9 @@ namespace ByteBank.Contas
     //Quando estamos desenvolvendo, não só em C#, é muito comum nos depararmos com nomes de métodos que utilizam o prefixo get e set.
 }
 
-
+/* 
+ 
+ Métodos construtores são chamados quando criamos um objeto usando o operador new. Por meio deles, podemos informar os valores dos campos no momento da criação do objeto;
+Construtores explícitos são definidos por quem desenvolve e construtores implícitos são criados pelo próprio .NET quando não definimos explicitamente;
+A palavra reservada static é utilizada para definir um campo ou propriedade como membro de uma classe. Assim conseguimos compartilhar informações com todos os objetos de uma classe.
+ */
