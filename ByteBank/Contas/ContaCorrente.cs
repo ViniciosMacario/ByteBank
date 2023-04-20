@@ -86,7 +86,7 @@ namespace ByteBank.Contas
     //Quando estamos desenvolvendo, não só em C#, é muito comum nos depararmos com nomes de métodos que utilizam o prefixo get e set.
 }
 
-/* 
+/* 0
  
  Métodos construtores são chamados quando criamos um objeto usando o operador new. Por meio deles, podemos informar os valores dos campos no momento da criação do objeto;
 Construtores explícitos são definidos por quem desenvolve e construtores implícitos são criados pelo próprio .NET quando não definimos explicitamente;
